@@ -16,7 +16,7 @@ export class AgregarComponent implements OnInit {
   ngOnInit() {
   }
 guardar(){
-  this.service.createAlumno(this.user)
+  this.service.createUser(this.user)
   .subscribe(data=>{
     alert("Se agrego con exito.");
     this.router.navigate(["listar"]);

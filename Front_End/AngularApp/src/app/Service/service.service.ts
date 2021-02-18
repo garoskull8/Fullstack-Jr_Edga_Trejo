@@ -10,7 +10,10 @@ export class ServiceService {
   Url='http://localhost:8082/users';
   constructor(private http:HttpClient) { }
 
-  createAlumno(user:UserModel){
+  getAll(){
+    return this.http.get<UserModel[]>(this.Url);
+  }
+  createUser(user:UserModel){
     return this.http.post<UserModel>(this.Url,user);
   }
 }

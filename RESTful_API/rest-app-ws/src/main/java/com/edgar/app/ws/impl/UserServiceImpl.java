@@ -1,5 +1,8 @@
 package com.edgar.app.ws.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,6 +19,24 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	UserRepository userRepository;
 
+	@Override
+	public List<UserDto> getAll() {
+		
+		List<UserEntity> userEntity = userRepository.findAll();
+		if(userEntity.size()>0) {
+		System.out.println("Tamaño"+userEntity.size());
+		List<UserDto> returnValue= new ArrayList<UserDto>();
+		for (UserEntity source: userEntity ) {
+	        UserDto target= new UserDto();
+	        BeanUtils.copyProperties(source , target);
+	        returnValue.add(target);
+	     }
+		return returnValue;
+		}else {
+			throw new RuntimeException("Esta vacio");
+
+		}
+	}
 	@Override
 	public UserDto createUser(UserDto user) {
 		if (userRepository.findByEmail(user.getEmail()) != null)
@@ -87,5 +108,7 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }

@@ -1,5 +1,8 @@
 package com.edgar.app.ws.ui.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -28,8 +31,22 @@ public class UserController {
 	@Autowired//crea link(intancia) entre el servicio y el rest
 	UserService userService;
 	
+	@GetMapping
+	public List<UserGetResponse> getAllUser() {
+		List<UserGetResponse> returnValue = new ArrayList<UserGetResponse>();
+		List<UserDto> userDto= userService.getAll();
+		System.out.println("Tamaño en control"+userDto.size());
+		for (UserDto source: userDto ) {
+			UserGetResponse target= new UserGetResponse();
+	        BeanUtils.copyProperties(source , target);
+	        returnValue.add(target);
+	     }
+		
+		return returnValue;
+	}
+	
 	@GetMapping(path="/{id}")
-	public UserGetResponse getAlumno(@PathVariable("id") int id) {
+	public UserGetResponse getUser(@PathVariable("id") int id) {
 		UserGetResponse returnValue = new UserGetResponse();
 		UserDto userDto=userService.getUserById(id);
 		BeanUtils.copyProperties(userDto, returnValue);

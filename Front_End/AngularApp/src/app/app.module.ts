@@ -7,6 +7,7 @@ import { ListarComponent } from './User/listar/listar.component';
 import { AgregarComponent } from './User/agregar/agregar.component';
 import { EditComponent } from './User/edit/edit.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ServiceService } from './Service/service.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
