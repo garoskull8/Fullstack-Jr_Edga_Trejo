@@ -1,0 +1,5 @@
+package com.edgar.app.ws.io.repositories;
+
+public class AlumnoRepository {
+
+}

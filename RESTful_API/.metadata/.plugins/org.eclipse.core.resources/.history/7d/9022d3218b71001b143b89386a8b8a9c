@@ -1,0 +1,9 @@
+package com.edgar.app.ws.service;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import com.edgar.app.ws.shared.dto.UserDto;
+
+public interface UserService extends UserDetailsService {
+	UserDto createUser(UserDto user);
+	//Dto getAlumno(String email);
+
+}

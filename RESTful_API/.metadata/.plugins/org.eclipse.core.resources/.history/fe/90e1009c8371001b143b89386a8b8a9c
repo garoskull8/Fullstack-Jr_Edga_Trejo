@@ -1,0 +1,10 @@
+package com.edgar.app.ws.ui.model.response;
+
+public class UserCreateResponse {
+	
+	private String nombre;
+	private String ap;
+	private String am;
+	private String email;
+
+}

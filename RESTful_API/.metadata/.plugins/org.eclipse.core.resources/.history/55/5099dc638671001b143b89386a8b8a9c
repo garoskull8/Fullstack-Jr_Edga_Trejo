@@ -1,0 +1,18 @@
+package com.edgar.app.ws.shared.dto;
+
+import java.io.Serializable;
+
+public class UserDto  implements Serializable {
+	private static final long serialVersionUID = -6538674020611350052L;
+	private int id_user;
+	private String nombre;
+	private String ap;
+	private String am;
+	private String email;
+	private String password;
+	private String calle;
+	private String numero;
+	private String municipio;
+	private String estado;
+	private String telefono;
+}

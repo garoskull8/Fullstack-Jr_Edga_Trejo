@@ -1,0 +1,16 @@
+package com.edgar.app.ws.ui.model.request;
+
+public class UserRequest {
+
+	private String nombre;
+	private String ap;
+	private String am;
+	private String email;
+	private String encryptedpassword;
+	private String calle;
+	private String numero;
+	private String municipio;
+	private String estado;
+	private String telefono;
+
+}

@@ -1,0 +1,55 @@
+package com.edgar.app.ws.ui.controller;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.edgar.app.ws.ui.model.request.UserModel;
+import com.edgar.app.ws.ui.model.response.UserCreateResponse;
+
+@RestController //Permite que la clase actue como servlet
+@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("users")// http://localhost:8080/alumnos
+// Very simple RESTful web service- difines CRUD operations
+public class UserController {
+	@Autowired//crea link(intancia) entre el servicio y el rest
+	AlumnoService alumnoService;
+	
+	@GetMapping
+	public String getAlumno() {
+		return "Obtener alumnno";
+	}
+	
+	
+	@PostMapping
+	public UserCreateResponse createAlumno(@RequestBody UserModel alumno) {
+		UserCreateResponse returnValue = new UserCreateResponse();
+		AlumnoDto alumnoDto=new AlumnoDto();
+		
+		BeanUtils.copyProperties(alumno, alumnoDto);
+		
+		AlumnoDto createdAlumno = alumnoService.createAlumno(alumnoDto);
+		BeanUtils.copyProperties(createdAlumno, returnValue);
+		
+		return returnValue; 
+	}
+	
+	@PutMapping
+	public String updateAlumno() {
+		return "Actualizar alumno";
+	}
+	
+	@DeleteMapping
+	public String deletUser() {
+		return "Remover alumno";
+	}
+	
+
+}

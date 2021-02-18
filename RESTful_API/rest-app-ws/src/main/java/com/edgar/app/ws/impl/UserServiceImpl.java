@@ -1,0 +1,32 @@
+package com.edgar.app.ws.impl;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.edgar.app.ws.io.entity.UserEntity;
+import com.edgar.app.ws.io.repositories.UserRepository;
+import com.edgar.app.ws.service.UserService;
+import com.edgar.app.ws.shared.dto.UserDto;
+
+@Service
+public class UserServiceImpl implements UserService {
+	@Autowired
+	UserRepository userRepository;
+
+	@Override
+	public UserDto createUser(UserDto user) {
+		if (userRepository.findByEmail(user.getEmail()) != null)
+			throw new RuntimeException("ya existe");
+
+		UserEntity userEntity = new UserEntity();
+		BeanUtils.copyProperties(user, userEntity);
+
+		UserEntity detallesAlmacenados = userRepository.saveAndFlush(userEntity);
+		
+		UserDto returnValue = new UserDto();
+		BeanUtils.copyProperties(detallesAlmacenados, returnValue);
+		return returnValue;
+	}
+
+}
