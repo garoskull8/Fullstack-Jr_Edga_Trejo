@@ -108,6 +108,16 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
+	public int userId(String email) {
+		UserEntity userEntity=userRepository.findByEmail(email);
+		
+		if (userRepository.findByEmail(email) == null)
+			throw new RuntimeException("No existe");
+		
+		// TODO Auto-generated method stub
+		return userEntity.getId_user();
+	}
 
 	
 
