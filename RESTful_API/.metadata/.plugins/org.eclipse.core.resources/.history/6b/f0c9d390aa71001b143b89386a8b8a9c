@@ -1,0 +1,6 @@
+package com.edgar.app.ws.security;
+
+@EnableWebSecurity
+public class WebSecurity {
+
+}

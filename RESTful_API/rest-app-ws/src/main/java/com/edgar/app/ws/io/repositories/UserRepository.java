@@ -9,5 +9,6 @@ import com.edgar.app.ws.io.entity.UserEntity;
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, Integer> {	
 	UserEntity findByEmail(String email);
+	UserEntity findById(int id);
 	
 }

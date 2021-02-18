@@ -1,0 +1,12 @@
+package com.edgar.app.ws.service;
+
+import com.edgar.app.ws.shared.dto.UserDto;
+
+public interface UserService {
+	UserDto createUser(UserDto user);
+	UserDto getUserById(int id);
+	UserDto updateUser(int id, UserDto user);
+	//Dto getAlumno(String email);
+	void deleteUser(int id);
+}
+ 
