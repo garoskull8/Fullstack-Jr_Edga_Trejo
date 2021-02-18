@@ -1,1 +1,45 @@
-<p>edit works!</p>
+<div class="container">
+        <h3>Editar</h3>
+        <br>
+        <form action="" method="POST" class="form-control">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input [(ngModel)]="user.nombre" type="text" class="form-control" name="nombre" placeholder="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="ap">Apellido paterno</label>
+                <input [(ngModel)]="user.ap" type="text" class="form-control" name="ap" placeholder="ap" required>
+            </div>
+            <div class="form-group">
+                <label for="am">Apellido materno</label>
+                <input [(ngModel)]="user.am" type="text" class="form-control" name="am" placeholder="am" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Email</label>
+                <input [(ngModel)]="user.email" type="email" class="form-control" name="email" placeholder="email" required>
+            </div>
+            <div class="form-group">
+                <label for="tel">Teléfono </label>
+                <input [(ngModel)]="user.telefono" type="text" class="form-control" name="telefono" placeholder="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="calle">Calle</label>
+                <input [(ngModel)]="user.calle" type="text" class="form-control" name="calle" placeholder="calle" required>
+            </div>
+            <div class="form-group">
+                <label for="numero">número</label>
+                <input [(ngModel)]="user.numero"  type="text" class="form-control" name="numero" placeholder="numero" required>
+            </div>
+            <div class="form-group">
+                <label for="municipio">Municipio</label>
+                <input [(ngModel)]="user.municipio" type="text" class="form-control" name="municipio" placeholder="municipio" required>
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado</label>
+                <input [(ngModel)]="user.estado" type="text" class="form-control" name="estado" placeholder="estado" required>
+            </div>
+            <br>
+            <button (click)="actualizar(user)" class="btn btn-primary">Actualizar</button>
+        </form>
+    
+    </div>

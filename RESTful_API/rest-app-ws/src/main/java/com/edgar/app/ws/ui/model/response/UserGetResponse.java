@@ -1,6 +1,7 @@
 package com.edgar.app.ws.ui.model.response;
 
 public class UserGetResponse {
+	private int id_user;
 	private String nombre;
 	private String ap;
 	private String am;
@@ -11,6 +12,13 @@ public class UserGetResponse {
 	private String estado;
 	private String telefono;
 	
+	
+	public int getId_user() {
+		return id_user;
+	}
+	public void setId_user(int id_user) {
+		this.id_user = id_user;
+	}
 	public String getNombre() {
 		return nombre;
 	}
