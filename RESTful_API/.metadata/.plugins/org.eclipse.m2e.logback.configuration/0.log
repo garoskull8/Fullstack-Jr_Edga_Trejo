@@ -3195,3 +3195,4 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.gu
 2021-02-18 13:16:17,418 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-02-18 13:16:17,418 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2021-02-18 13:16:17,418 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\edgar\Desktop\Fullstack Jr_Edga_Trejo\RESTful_API\rest-app-ws\src\test\resources
+2021-02-18 13:37:51,572 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

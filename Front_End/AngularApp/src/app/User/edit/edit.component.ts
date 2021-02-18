@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/Service/service.service';
 import { UserModel } from 'src/app/Model/user-model';
-import { userInfo } from 'os';
+
 
 @Component({
   selector: 'app-edit',

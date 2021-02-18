@@ -8,6 +8,7 @@ import { AgregarComponent } from './User/agregar/agregar.component';
 import { EditComponent } from './User/edit/edit.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceService } from './Service/service.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ServiceService } from './Service/service.service';
     ListarComponent,
     AgregarComponent,
     EditComponent,
-    routingComponents
+    routingComponents,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
