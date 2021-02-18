@@ -818,3 +818,15 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.eclipse.ui 2 2 2021-02-17 23:57:26.427
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 00:00:56.568
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.NzNuYanR
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 00:00:56.569
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.NzNuYanR
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 00:00:56.570
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-02-18 00:00:56.570
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.NzNuYanR => OK
